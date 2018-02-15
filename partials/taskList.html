@@ -1,0 +1,5 @@
+<ol>
+    <li ng-repeat="Item in todo.itemArray | filter: toDofilter | orderBy track by $index">{{Item}}
+        <button ng-click="todo.removeItem($index)" type="button"><i class="material-icons">close</i></button>
+    </li>
+</ol>

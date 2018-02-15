@@ -1,0 +1,12 @@
+<div id="mainDiv">
+    <div id="container">
+        <h3>TODO LIST</h3>
+        <p>A place to store the things to do!</p>
+        <input type="text" name="FilterInput" ng-model="toDofilter" placeholder="Filter Your to-dos!">
+        <form ng-submit="$ctrl.updateInfo($ctrl.addNewItem)">
+            <task-list list="$ctrl.taskList" ng-repeat="task in $ctrl.list"></task-list>
+            <input type="text" name="" ng-model="$ctrl.addNewItem" placeholder="Add your to-do">
+            <button id="saveItemButton">Save Item To List</button>
+        </form>
+    </div>
+</div>
