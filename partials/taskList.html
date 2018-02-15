@@ -1,5 +1,6 @@
+<input type="text" name="FilterInput" ng-model="filterText" placeholder="Filter Your to-dos!">
 <ol>
-    <li ng-repeat="Item in todo.itemArray | filter: toDofilter | orderBy track by $index">{{Item}}
-        <button ng-click="todo.removeItem($index)" type="button"><i class="material-icons">close</i></button>
+    <li ng-repeat="item in $ctrl.todoList | filter: filterText | orderBy">{{item}}
+        <button ng-click="$ctrl.removeItem($index)" type="button"><i class="material-icons">close</i></button>
     </li>
 </ol>
